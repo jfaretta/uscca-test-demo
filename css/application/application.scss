@@ -1,0 +1,183 @@
+// fonts 
+@font-face {
+    font-family: 'museo';
+    src: url('../fonts/museo.woff2') format('woff2'),
+        url('../fonts/museo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// variables
+$font: museo;
+$blue: #192C58;
+$red: #CF0A2C;
+$grey: #4A4A4A;
+$grey-dark: #373435;
+
+//typography
+body {
+	color: $grey;
+	font: 400 14px/18px museo;	
+}
+
+p {
+	margin-bottom: 15px;
+}
+
+h1 {
+	color: $red;
+	font-size: 70px;
+	text-transform: capitalize;
+	
+	@media screen and (max-width: 992px) {
+		font-size: 36px;
+		line-height: 40px;
+	}
+	
+	@media screen and (max-width: 768px) {
+		font-size: 5vw;
+		line-height: 6vw;
+	}
+	
+	span {
+		color: $blue;
+		display: block;
+		font-size: 42px;
+	}
+}
+
+h2 {
+	color: $grey;
+	font-size: 50px;
+	text-transform: uppercase;
+	
+	@media screen and (max-width: 992px) {
+		font-size: 36px;
+		line-height: 40px;
+	}
+	
+	@media screen and (max-width: 768px) {
+		font-size: 5vw;
+		line-height: 6vw;
+	}
+	
+	span {
+		color: $red;
+	}
+}
+
+// Theme
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+.grey-bg {
+	background: #efefef;
+	padding: 30px 0;
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+.intro-con {
+	background: #fff;
+	border-bottom: 15px solid $blue;
+	padding-top: 50px;
+}
+
+.red-label {
+	border-bottom: 3px solid $red;
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+
+// carousel
+.carousel-wrap {
+  margin: 100px auto -400px;
+  width: 250px;
+  height: 650px;
+  position: relative;
+  perspective: 1250px;
+	
+	@media screen and (max-width: 992px) {
+		
+	}
+}
+
+.carousel {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+	
+	> div {
+	  display: block;
+	  position: absolute;
+	  background: #fff;
+	  border: 3px solid $grey-dark;
+	  width: 250px;
+	  height: 200px;
+	  text-align: center;
+		
+		div {
+			padding: 15px;
+			
+			img {
+				height: 100px;
+			}
+		}
+		
+		span {
+			color: $red;
+			display: block;
+			font-size: 20px;
+			margin-bottom: 5px;
+			
+			&:before,
+			&:after {
+				color: $blue;
+				content: "\2605";
+			}
+		}
+	}
+}
+
+
+.a {
+  transform: rotateY(0deg) translateZ(250px);
+  background: #ed1c24;
+}
+.b {
+  transform: rotateY(72deg) translateZ(250px);
+  background: #0072bc;
+}
+.c {
+  transform: rotateY(144deg) translateZ(250px);
+  background: #39b54a;
+}
+.d {
+  transform: rotateY(216deg) translateZ(250px);
+  background: #f26522;
+}
+.e {
+  transform: rotateY(288deg) translateZ(250px);
+  background: #630460;
+} 
+
+.next,
+.prev {
+	background: $grey;
+  color: #fff;
+	display: inline-block;
+	font-size: 26px;
+  padding: 8px 12px;
+	position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease 0s;
+	z-index: 100;
+}
+.next:hover, .prev:hover { background: $grey-dark; }
+.next:active, .prev:active {
+  background: $red;
+}
