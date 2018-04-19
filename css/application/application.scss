@@ -12,7 +12,9 @@ $font: museo;
 $blue: #192C58;
 $red: #CF0A2C;
 $grey: #4A4A4A;
+$green: #269f42;
 $grey-dark: #373435;
+$white: #fff;
 
 //typography
 body {
@@ -49,7 +51,6 @@ h1 {
 h2 {
 	color: $grey;
 	font-size: 50px;
-	text-transform: uppercase;
 	
 	@media screen and (max-width: 992px) {
 		font-size: 36px;
@@ -63,6 +64,7 @@ h2 {
 	
 	span {
 		color: $red;
+		text-transform: uppercase;
 	}
 }
 
@@ -74,20 +76,52 @@ img {
 
 .grey-bg {
 	background: #efefef;
-	padding: 30px 0;
-	margin-bottom: 30px;
+	padding: 60px 0;
 	overflow: hidden;
 }
 
+.spacer {
+	padding: 40px 0;
+}
+
+.btn-sell {
+	background: $green;
+	color: $white;
+	display: inline-block;
+	font-size: 20px;
+	padding: 15px 20px;
+	margin: 20px 0; 
+	transition: background .3s ease 0s;
+	
+	&:hover {
+		background: $blue;
+		color: white;
+		text-decoration: none;
+	}
+			
+	&:before,
+	&:after {
+		color: $white;
+		content: "\2605";
+		margin: 0 5px;
+	}
+}
+
 .intro-con {
-	background: #fff;
+	background: url(../img/intro-bg.jpg);
 	border-bottom: 15px solid $blue;
 	padding-top: 50px;
+	
+	p {
+		font-size: 20px;
+		line-height: 1.2;
+		margin-bottom: 40px;
+	}
 }
 
 .red-label {
 	border-bottom: 3px solid $red;
-	margin-top: 20px;
+	margin: 20px 0;
 	padding-bottom: 20px;
 }
 
@@ -97,10 +131,9 @@ img {
   width: 250px;
   height: 650px;
   position: relative;
-  perspective: 1250px;
 	
-	@media screen and (max-width: 992px) {
-		
+	@media screen and (min-width: 992px) {
+	  perspective: 2600px;
 	}
 }
 
@@ -114,7 +147,7 @@ img {
 	> div {
 	  display: block;
 	  position: absolute;
-	  background: #fff;
+	  background: $white;
 	  border: 3px solid $grey-dark;
 	  width: 250px;
 	  height: 200px;
@@ -168,7 +201,7 @@ img {
 .next,
 .prev {
 	background: $grey;
-  color: #fff;
+  color: $white;
 	display: inline-block;
 	font-size: 26px;
   padding: 8px 12px;
@@ -180,4 +213,14 @@ img {
 .next:hover, .prev:hover { background: $grey-dark; }
 .next:active, .prev:active {
   background: $red;
+}
+
+.level-con {
+	h2 {
+		margin-bottom: 40px;
+	}
+	
+	.levels {
+		display: flex;
+	}
 }

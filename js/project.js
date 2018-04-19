@@ -19,4 +19,11 @@ $( document ).ready(function() {
 		"transform": "rotateY("+currdeg+"deg)"
 	  });
 	}
+	
+	$(".smooth-scroll").click(function() {
+		$('html,body').animate({
+			scrollTop: $("#Levels").offset().top},
+			'slow');
+	});
 });
+
