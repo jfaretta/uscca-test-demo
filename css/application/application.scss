@@ -31,20 +31,33 @@ h1 {
 	font-size: 70px;
 	text-transform: capitalize;
 	
-	@media screen and (max-width: 992px) {
-		font-size: 36px;
-		line-height: 40px;
-	}
-	
-	@media screen and (max-width: 768px) {
-		font-size: 5vw;
-		line-height: 6vw;
-	}
-	
 	span {
 		color: $blue;
 		display: block;
 		font-size: 42px;
+	}
+
+	@media screen and (max-width: 1200px) {
+		font-size: 36px;
+		line-height: 40px;
+	}
+
+	@media screen and (max-width: 992px) {
+		font-size: 36px;
+		line-height: 40px;
+		
+		span {
+			font-size: 32px;
+		}
+	}
+	
+	@media screen and (max-width: 768px) {
+		font-size: 10vw;
+		line-height: 1;
+		
+		span {
+			font-size: 6vw;
+		}
 	}
 }
 
@@ -81,7 +94,7 @@ img {
 }
 
 .spacer {
-	padding: 40px 0;
+	padding: 40px 15px;
 }
 
 .btn-sell {
@@ -105,17 +118,29 @@ img {
 		content: "\2605";
 		margin: 0 5px;
 	}
+		
+		@media screen and (max-width: 992px) {
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
 }
 
 .intro-con {
 	background: url(../img/intro-bg.jpg);
 	border-bottom: 15px solid $blue;
-	padding-top: 50px;
 	
+	@media screen and (min-width: 768px) {
+		padding-top: 50px;
+	}
 	p {
 		font-size: 20px;
 		line-height: 1.2;
 		margin-bottom: 40px;
+		
+		@media screen and (max-width: 992px) {
+			font-size: 14px;
+			margin-bottom: 10px;
+		}
 	}
 }
 
